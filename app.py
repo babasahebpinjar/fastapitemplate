@@ -43,6 +43,11 @@ async def openAIchat(sentence : str ):
 
     return response
 
+
+@app.post('/helloWorld', response_class=ORJSONResponse)
+async def helloWorld(sentence : str ): 
+    return sentence
+
 if __name__ == '__main__':
    
     uvicorn.run(app, host="0.0.0.0", port=5001)
